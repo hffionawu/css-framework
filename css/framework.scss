@@ -1,0 +1,347 @@
+/*
+* 2016-01
+* for GJ RWD design course
+* created by Hui Fang Wu
+* http://www.fionawu.url.tw/
+*/
+$baselineH: 1.6!default;
+$device-mb: 800;
+$maxW-px : 1200;
+$maxW: 100%;
+$columns: $maxW-px / 12;
+$columnsPercent: ($maxW-px / 12) * 100%;
+$columnSingle: (($columns - 16) / $maxW-px) * 100%;
+$grid: ($columns / $maxW-px) * 100%;
+$margin: (16 / $maxW-px) * 100%;
+$padding: 1;
+$calcFx: ($columns / $maxW-px) * 100% - $margin ;
+$baseSize: 1;
+@mixin flexbox() {
+
+  display:-webkit-box;
+  display:-moz-box;
+  display:-ms-flexbox;
+  display:-webkit-flex;
+  display: flex;
+}
+@mixin prefix($declarations, $prefixes: ()) {
+  @each $property, $value in $declarations {
+    @each $prefix in $prefixes {
+      #{'-' + $prefix + '-' + $property}: $value;
+    }
+
+    // Output standard non-prefixed declaration
+    #{$property}: $value;
+  }
+}
+@function fxFn($n) {
+ @return round($calcFx + ( $calcFx * $n)) ;
+}
+@function gwFn($n) {
+ @return ceil($columnSingle + ($grid * $n)) ;
+}
+
+*, div, header, nav, article, section, aside,
+footer, main, h1, h2, h3, h4, h5, h6,
+p, span, a, i, em, strong, ol, ul, li, small, blockquote,
+form, fieldset {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  list-style-type: none;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  }
+ html, body {
+   width: 100%;
+   height: 100%;
+ }
+ body {
+   overflow-x: hidden;
+   -webkit-overflow-scrolling: touch;
+   line-height: 1.6;
+   font-size: 100%;
+   font-size: 1rem;
+   font-family: "Helvatica Neue", 'Helvatica', "Arial", "蘋方-繁", "微軟繁黑體", sans-serif;
+ }
+ #page {
+   float: left;
+   width: 100%;
+   min-height: 100vmin;
+   position: relative;
+   z-index: 0;
+ }
+ header, nav, article, section, aside,
+ footer, main {
+   display: block;
+ }
+ *[class*="pd"] {
+   @include prefix((
+   box-sizing: border-box,
+   ), webkit moz);
+ }
+ .pos-r { position: relative;}
+ .block { display: block;}
+ .ta-c { text-align: center;}
+ .ta-l { text-align: left;}
+ .ta-r { text-align: right;}
+ .pd1 { padding-top: $padding + em; padding-bottom: $padding + em;}
+ .pt1 { padding-top: $padding + em;}
+ .pb1 { padding-bottom: $padding + em;}
+ .pd3 { padding-top: $padding * 3 + em; padding-bottom: $padding * 3 + em;}
+ .pt3 { padding-top: $padding * 3 + em;}
+ .pb3 { padding-bottom: $padding * 3 + em;}
+ .pd5 { padding-top: $padding * 5 + em; padding-bottom: $padding * 5 + em;}
+ .pt5 { padding-top: $padding * 5 + em;}
+ .pb5 { padding-bottom: $padding * 5 + em;}
+
+ .inline-menu{
+   display: block;
+   li{
+     display: inline-block;
+       a{
+         display: block;
+       }
+   }
+ }
+ .fx-container {
+   @include flexbox;
+   @include prefix((
+   flex-flow: row wrap,
+   align-items: stretch,/*child vertical align*/
+   justify-content: space-between, /*items leave space how allocate to content*/
+   ), webkit moz ms o);
+    margin: 0 auto;
+ }
+  .fx-container.full-device {
+    width: 100%;
+    max-width: 100%;
+  }
+ .container {
+   display: block;
+   float: none;
+   margin: 0 auto;
+ }
+.gw-1 { width: gwFn(0);}
+.gw-2 { width: gwFn(1);}
+.gw-3 { width: gwFn(2);}
+.gw-4 { width: gwFn(3) + 0.42;}
+.gw-5 { width: gwFn(4);}
+.gw-6 { width: gwFn(5);}
+.gw-7 { width: gwFn(6);}
+.gw-8 { width: gwFn(7);}
+.gw-9 { width: gwFn(8);}
+.gw-10 { width: gwFn(9);}
+.gw-11 { width: gwFn(10);}
+.gw-12 { width: $maxW;}
+
+.fx-items-1 { width: fxFn(0) - 1.5; min-width: 90px;}
+.fx-items-2 { width: fxFn(1); }
+.fx-items-3 { width: fxFn(2); }
+.fx-items-4 { width: fxFn(3);}
+.fx-items-5 { width: fxFn(4);}
+.fx-items-6 { width: fxFn(5);}
+.fx-items-7 { width: fxFn(6);}
+.fx-items-8 { width: fxFn(7);}
+.fx-items-9 { width: fxFn(8);}
+.fx-items-10 { width: fxFn(9) ;}
+.fx-items-11 { width: fxFn(10);}
+.fx-items-12 { width: $maxW;}
+
+*[class^="gw-"] {
+  float: left;
+  display: block;
+  margin: 0 $margin 0 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*[class^="fx-items"] {
+  margin: 0 8px;
+  @include prefix((
+  box-sizing: border-box,
+  flex: 1 1 auto,
+  ), webkit moz ms o) ;
+  /*
+   * flex is : flex-grow, flex-shrink, flex-basis
+     shortcut write.
+   * flex-grow : default value 1, if not 0,
+     items can be glow, and allow leave space allocate to other items.
+   * flex-shrink : default value 1, if not 0, that allow items necessary to shrink.
+   * flex-basis : default value auto,
+     if set 0 , the extra space around content isn't factored in.
+     if set auto, the extra space is distributed based on its flex-grow value.
+  */
+}
+*[class^="fx-items"].space-no {
+  margin: 0;
+}
+.items-center {
+  @include prefix((
+  justify-content: center,
+  ), webkit moz ms o);
+}
+.pd-box {
+  @include prefix((
+  box-sizing: border-box,
+  ), webkit moz);
+  padding-left: 15px;
+  padding-right: 15px;
+  float: left;
+  width: $maxW;
+}
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+.cf:after, .clear {
+  clear: both;
+}
+.cf{ *zoom:1;}
+.pc-hidden,
+[class^="fx-items-"].pc-hidden { display: none; }
+
+.mobi-hidden {display: inline-block;}
+[class^="fx-items-"].mobi-hidden { display: inherit; }
+.omega { margin-right:0; float: right; }
+.alpha { margin-left:0; float: left;}
+.fx-order-1 { order: 1; }
+.fx-order-2 { order: 2; }
+.fx-order-3 { order: 3; }
+.fx-order-4 { order: 4; }
+.fx-order-5 { order: 5; }
+.fx-order-6 { order: 6; }
+.fx-order-7 { order: 7; }
+.fx-order-8 { order: 8; }
+.fx-order-9 { order: 9; }
+.fx-order-10 { order: 10; }
+.fx-order-11 { order: 11; }
+.fx-order-12 { order: 12; }
+@media screen and (min-width: 300px) and (max-width: 800px) {
+  .pc-hidden { display: block;}
+  [class^="fx-items-"].pc-hidden { display: inherit; }
+
+  .mobi-hidden,
+  [class^="fx-items-"].mobi-hidden { display: none; }
+  h1 { font-size: $baseSize * 2.4 + em; line-height: 1.4;}
+  h2 { font-size: $baseSize * 2 + em; line-height: 1.4;}
+  h3 { font-size: $baseSize * 1.8 + em;}
+  h4 { font-size: $baseSize * 1.4 + em;}
+  h5 { font-size: $baseSize * 1.2 + em;}
+  h6 { font-size: $baseSize * 1.15 + em;}
+  p  { font-size: $baseSize * 1.1 + em;}
+}
+@media screen and (min-width: 300px) and (max-width: 640px) {
+  .container, .fx-container {
+    width: 100%;
+    display: block;
+    float: left;
+    margin: 0 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  *[class^="gw-"], *[class^="fx-items"]{
+    display: block;
+    float: left;
+    width: 100%;
+    margin: 0;
+  }
+
+}
+
+
+@media screen and (min-width: 641px) and (max-width: 800px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .fx-container {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  *[class^="gw-"]:not(.gw-12), *[class^="fx-items"]:not(.fx-items-12){
+    width: calc(50% - 8px);
+    margin: 0 4px;
+    @include prefix((
+    box-sizing: border-box,
+    flex: 0 1 auto,
+    ), webkit moz ms o) ;
+  }
+  .gw-12, .fx-items-12 {
+    width: calc(100% - 8px);
+    margin: 0 4px;
+  }
+}
+
+@media screen and (min-width: 801px) and (max-width: 1120px) {
+  .container, .fx-container {
+    width: 100%;
+    max-width: 100%;
+  }
+    h1 { font-size: $baseSize * 3 + em;}
+    h2 { font-size: $baseSize * 2.2 + em;}
+    h3 { font-size: $baseSize * 2 + em;}
+    h4 { font-size: $baseSize * 1.4 + em;}
+    h5 { font-size: $baseSize * 1.2 + em;}
+    h6 { font-size: $baseSize * 1.1 + em;}
+    p  { font-size: $baseSize - 0.05 + em;}
+
+}
+
+@media screen and (min-width: 1121px) and (max-width: 1366px) {
+  .container, .fx-container {
+    width: 90%;
+    max-width: 1120px;
+  }
+    h1 { font-size: $baseSize * 3.2 + em;}
+    h2 { font-size: $baseSize * 2.4 + em;}
+    h3 { font-size: $baseSize * 2.2 + em;}
+    h4 { font-size: $baseSize * 1.6 + em;}
+    h5 { font-size: $baseSize * 1.4 + em;}
+    h6 { font-size: $baseSize * 1.1 + em;}
+    p  { font-size: $baseSize * 1 + em;}
+}
+
+@media screen and (min-width: 1367px) and (max-width: 1680px) {
+  .container, .fx-container {
+    width: 90%;
+    max-width: 1280px;
+  }
+  h1 { font-size: $baseSize * 3.2 + em;}
+  h2 { font-size: $baseSize * 2.4 + em;}
+  h3 { font-size: $baseSize * 2.2 + em;}
+  h4 { font-size: $baseSize * 1.6 + em;}
+  h5 { font-size: $baseSize * 1.4 + em;}
+  h6 { font-size: $baseSize * 1.1 + em;}
+  p  { font-size: $baseSize * 1 + em;}
+}
+@media screen and (min-width: 1681px) and (max-width: 1920px) {
+  .container, .fx-container {
+    width: 90%;
+    max-width: 1366px;
+  }
+  h1 { font-size: $baseSize * 3.2 + em;}
+  h2 { font-size: $baseSize * 2.6 + em;}
+  h3 { font-size: $baseSize * 2.4 + em;}
+  h4 { font-size: $baseSize * 1.8 + em;}
+  h5 { font-size: $baseSize * 1.6 + em;}
+  h6 { font-size: $baseSize * 1.1 + em;}
+  p  { font-size: $baseSize * 1.05 + em;}
+}

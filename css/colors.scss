@@ -1,0 +1,293 @@
+/*
+* 2016-01
+* for GJ RWD design course
+* created by Hui Fang Wu
+* http://www.fionawu.url.tw/
+*/
+$basePink: #FF0065;
+$baseBlue: #00558D;
+$baseLightBlue: #29ABE2;
+$baseIndigo: #171949;
+$baseCyan: #007d7d;
+$baseViolet: #8a2be2;
+$baseOrchild: #bf3eff;
+$baseDeepOrange:#ff410f;
+$baseOrange: #F7931E;
+$baseGolden: #FFCC00;
+$baseSeaGreen: #43CD80;
+$baseYellowGreen:#9BE52A;
+$baseGreen: #228B22;
+$baseBlack: #000;
+$baseGray: #7a7a7a;
+$baseStateGray: #6C7B8B;
+$baseTan: #CD853F;
+$baseLightSalmon:#8B5742;
+$baseBrown:#8B2323;
+$baseRed:#BB1515;
+.bgc-pink-100 { background-color: $basePink; }
+.bgc-pink-90 { background-color: lighten( $basePink, 10% );}
+.bgc-pink-80 { background-color: lighten( $basePink, 15% );}
+.bgc-pink-70 { background-color: lighten( $basePink, 25% );}
+.bgc-pink-60 { background-color: lighten( $basePink, 35% );}
+
+.bgc-blue-100 { background-color: $baseBlue; }
+.bgc-blue-90 { background-color: lighten( $baseBlue, 10% );}
+.bgc-blue-80 { background-color: lighten( $baseBlue, 20% );}
+.bgc-blue-70 { background-color: lighten( $baseBlue, 30% );}
+.bgc-blue-60 { background-color: lighten( $baseBlue, 40% );}
+
+.bgc-lightBlue-100 { background-color: $baseLightBlue; }
+.bgc-lightBlue-90 { background-color: lighten( $baseLightBlue, 10% );}
+.bgc-lightBlue-80 { background-color: lighten( $baseLightBlue, 20% );}
+.bgc-lightBlue-70 { background-color: lighten( $baseLightBlue, 25% );}
+.bgc-lightBlue-60 { background-color: lighten( $baseLightBlue, 30% );}
+
+.bgc-indigo-100 { background-color: $baseIndigo; }
+.bgc-indigo-90 { background-color: lighten( $baseIndigo, 5% );}
+.bgc-indigo-80 { background-color: lighten( $baseIndigo, 15% );}
+.bgc-indigo-70 { background-color: lighten( $baseIndigo, 25% );}
+.bgc-indigo-60 { background-color: lighten( $baseIndigo, 35% );}
+
+.bgc-cyan-100 { background-color: $baseCyan; }
+.bgc-cyan-90 { background-color: lighten( $baseCyan, 5% );}
+.bgc-cyan-80 { background-color: lighten( $baseCyan, 15% );}
+.bgc-cyan-70 { background-color: lighten( $baseCyan, 25% );}
+.bgc-cyan-60 { background-color: lighten( $baseCyan, 35% );}
+
+.bgc-violet-100 { background-color: $baseViolet; }
+.bgc-violet-90 { background-color: lighten( $baseViolet, 8% );}
+.bgc-violet-80 { background-color: lighten( $baseViolet, 16% );}
+.bgc-violet-70 { background-color: lighten( $baseViolet, 25% );}
+.bgc-violet-60 { background-color: lighten( $baseViolet, 32% );}
+
+.bgc-orchild-100 { background-color: $baseOrchild; }
+.bgc-orchild-90 { background-color: lighten( $baseOrchild, 5% );}
+.bgc-orchild-80 { background-color: lighten( $baseOrchild, 10% );}
+.bgc-orchild-70 { background-color: lighten( $baseOrchild, 18% );}
+.bgc-orchild-60 { background-color: lighten( $baseOrchild, 26% );}
+
+.bgc-deepOrange-100 { background-color: $baseDeepOrange; }
+.bgc-deepOrange-90 { background-color: lighten( $baseDeepOrange, 5% );}
+.bgc-deepOrange-80 { background-color: lighten( $baseDeepOrange, 10% );}
+.bgc-deepOrange-70 { background-color: lighten( $baseDeepOrange, 18% );}
+.bgc-deepOrange-60 { background-color: lighten( $baseDeepOrange, 26% );}
+
+.bgc-orange-100 { background-color: $baseOrange; }
+.bgc-orange-90 { background-color: lighten( $baseOrange, 4% );}
+.bgc-orange-80 { background-color: lighten( $baseOrange, 10% );}
+.bgc-orange-70 { background-color: lighten( $baseOrange, 18% );}
+.bgc-orange-60 { background-color: lighten( $baseOrange, 24% );}
+
+.bgc-golden-100 { background-color: $baseGolden; }
+.bgc-golden-90 { background-color: lighten( $baseGolden, 8% );}
+.bgc-golden-80 { background-color: lighten( $baseGolden, 14% );}
+.bgc-golden-70 { background-color: lighten( $baseGolden, 20% );}
+.bgc-golden-60 { background-color: lighten( $baseGolden, 28% );}
+
+.bgc-green-100 { background-color: $baseGreen; }
+.bgc-green-90 { background-color: lighten( $baseGreen, 8% );}
+.bgc-green-80 { background-color: lighten( $baseGreen, 14% );}
+.bgc-green-70 { background-color: lighten( $baseGreen, 20% );}
+.bgc-green-60 { background-color: lighten( $baseGreen, 28% );}
+
+.bgc-yellowGreen-100 { background-color: $baseYellowGreen; }
+.bgc-yellowGreen-90 { background-color: lighten( $baseYellowGreen, 8% );}
+.bgc-yellowGreen-80 { background-color: lighten( $baseYellowGreen, 14% );}
+.bgc-yellowGreen-70 { background-color: lighten( $baseYellowGreen, 20% );}
+.bgc-yellowGreen-60 { background-color: lighten( $baseYellowGreen, 28% );}
+
+.bgc-seaGreen-100 { background-color: $baseSeaGreen; }
+.bgc-seaGreen-90 { background-color: lighten( $baseSeaGreen, 8% );}
+.bgc-seaGreen-80 { background-color: lighten( $baseSeaGreen, 14% );}
+.bgc-seaGreen-70 { background-color: lighten( $baseSeaGreen, 20% );}
+.bgc-seaGreen-60 { background-color: lighten( $baseSeaGreen, 28% );}
+
+.bgc-black-100 { background-color: $baseBlack; }
+.bgc-black-90 { background-color: lighten( $baseBlack, 5% );}
+.bgc-black-80 { background-color: lighten( $baseBlack, 10% );}
+.bgc-black-70 { background-color: lighten( $baseBlack, 25% );}
+.bgc-black-60 { background-color: lighten( $baseBlack, 20% );}
+
+.bgc-gray-100 { background-color: $baseGray; }
+.bgc-gray-90 { background-color: lighten( $baseGray, 10% );}
+.bgc-gray-80 { background-color: lighten( $baseGray, 20% );}
+.bgc-gray-70 { background-color: lighten( $baseGray, 30% );}
+.bgc-gray-60 { background-color: lighten( $baseGray, 45% );}
+
+.bgc-stateGray-100 { background-color: $baseStateGray; }
+.bgc-stateGray-90 { background-color: lighten( $baseStateGray, 10% );}
+.bgc-stateGray-80 { background-color: lighten( $baseStateGray, 20% );}
+.bgc-stateGray-70 { background-color: lighten( $baseStateGray, 30% );}
+.bgc-stateGray-60 { background-color: lighten( $baseStateGray, 45% );}
+
+.bgc-tan-100 { background-color: $baseTan; }
+.bgc-tan-90 { background-color: lighten( $baseTan, 10% );}
+.bgc-tan-80 { background-color: lighten( $baseTan, 20% );}
+.bgc-tan-70 { background-color: lighten( $baseTan, 30% );}
+.bgc-tan-60 { background-color: lighten( $baseTan, 36% );}
+
+.bgc-lightSalmon-100 { background-color: $baseLightSalmon; }
+.bgc-lightSalmon-90 { background-color: lighten( $baseLightSalmon, 10% );}
+.bgc-lightSalmon-80 { background-color: lighten( $baseLightSalmon, 20% );}
+.bgc-lightSalmon-70 { background-color: lighten( $baseLightSalmon, 30% );}
+.bgc-lightSalmon-60 { background-color: lighten( $baseLightSalmon, 36% );}
+
+.bgc-brown-100 { background-color: $baseBrown; }
+.bgc-brown-90 { background-color: lighten( $baseBrown, 10% );}
+.bgc-brown-80 { background-color: lighten( $baseBrown, 20% );}
+.bgc-brown-70 { background-color: lighten( $baseBrown, 30% );}
+.bgc-brown-60 { background-color: lighten( $baseBrown, 36% );}
+
+.bgc-red-100 { background-color: $baseRed; }
+.bgc-red-90 { background-color: lighten( $baseRed, 10% );}
+.bgc-red-80 { background-color: lighten( $baseRed, 15% );}
+.bgc-red-70 { background-color: lighten( $baseRed, 25% );}
+.bgc-red-60 { background-color: lighten( $baseRed, 33% );}
+
+.bgc-white { background-color: #fff;}
+
+
+/*
+//
+font color
+//
+*/
+.text-pink-100 { color: $basePink; }
+.text-pink-90 { color: lighten( $basePink, 10% );}
+.text-pink-80 { color: lighten( $basePink, 15% );}
+.text-pink-70 { color: lighten( $basePink, 25% );}
+.text-pink-60 { color: lighten( $basePink, 35% );}
+
+.text-blue-100 { color: $baseBlue; }
+.text-blue-90 { color: lighten( $baseBlue, 10% );}
+.text-blue-80 { color: lighten( $baseBlue, 20% );}
+.text-blue-70 { color: lighten( $baseBlue, 30% );}
+.text-blue-60 { color: lighten( $baseBlue, 40% );}
+
+.text-lightBlue-100 { color: $baseLightBlue; }
+.text-lightBlue-90 { color: lighten( $baseLightBlue, 10% );}
+.text-lightBlue-80 { color: lighten( $baseLightBlue, 20% );}
+.text-lightBlue-70 { color: lighten( $baseLightBlue, 25% );}
+.text-lightBlue-60 { color: lighten( $baseLightBlue, 30% );}
+
+.text-indigo-100 { color: $baseIndigo; }
+.text-indigo-90 { color: lighten( $baseIndigo, 5% );}
+.text-indigo-80 { color: lighten( $baseIndigo, 15% );}
+.text-indigo-70 { color: lighten( $baseIndigo, 25% );}
+.text-indigo-60 { color: lighten( $baseIndigo, 35% );}
+
+.text-cyan-100 { color: $baseCyan; }
+.text-cyan-90 { color: lighten( $baseCyan, 5% );}
+.text-cyan-80 { color: lighten( $baseCyan, 15% );}
+.text-cyan-70 { color: lighten( $baseCyan, 25% );}
+.text-cyan-60 { color: lighten( $baseCyan, 35% );}
+
+.text-violet-100 { color: $baseViolet; }
+.text-violet-90 { color: lighten( $baseViolet, 8% );}
+.text-violet-80 { color: lighten( $baseViolet, 16% );}
+.text-violet-70 { color: lighten( $baseViolet, 25% );}
+.text-violet-60 { color: lighten( $baseViolet, 32% );}
+
+.text-orchild-100 { color: $baseOrchild; }
+.text-orchild-90 { color: lighten( $baseOrchild, 5% );}
+.text-orchild-80 { color: lighten( $baseOrchild, 10% );}
+.text-orchild-70 { color: lighten( $baseOrchild, 18% );}
+.text-orchild-60 { color: lighten( $baseOrchild, 26% );}
+
+.text-deepOrange-100 { color: $baseDeepOrange; }
+.text-deepOrange-90 { color: lighten( $baseDeepOrange, 5% );}
+.text-deepOrange-80 { color: lighten( $baseDeepOrange, 10% );}
+.text-deepOrange-70 { color: lighten( $baseDeepOrange, 18% );}
+.text-deepOrange-60 { color: lighten( $baseDeepOrange, 26% );}
+
+.text-orange-100 { color: $baseOrange; }
+.text-orange-90 { color: lighten( $baseOrange, 4% );}
+.text-orange-80 { color: lighten( $baseOrange, 10% );}
+.text-orange-70 { color: lighten( $baseOrange, 18% );}
+.text-orange-60 { color: lighten( $baseOrange, 24% );}
+
+.text-golden-100 { color: $baseGolden; }
+.text-golden-90 { color: lighten( $baseGolden, 8% );}
+.text-golden-80 { color: lighten( $baseGolden, 14% );}
+.text-golden-70 { color: lighten( $baseGolden, 20% );}
+.text-golden-60 { color: lighten( $baseGolden, 28% );}
+
+.text-green-100 { color: $baseGreen; }
+.text-green-90 { color: lighten( $baseGreen, 8% );}
+.text-green-80 { color: lighten( $baseGreen, 14% );}
+.text-green-70 { color: lighten( $baseGreen, 20% );}
+.text-green-60 { color: lighten( $baseGreen, 28% );}
+
+.text-yellowGreen-100 { color: $baseYellowGreen; }
+.text-yellowGreen-90 { color: lighten( $baseYellowGreen, 8% );}
+.text-yellowGreen-80 { color: lighten( $baseYellowGreen, 14% );}
+.text-yellowGreen-70 { color: lighten( $baseYellowGreen, 20% );}
+.text-yellowGreen-60 { color: lighten( $baseYellowGreen, 28% );}
+
+.text-seaGreen-100 { color: $baseSeaGreen; }
+.text-seaGreen-90 { color: lighten( $baseSeaGreen, 8% );}
+.text-seaGreen-80 { color: lighten( $baseSeaGreen, 14% );}
+.text-seaGreen-70 { color: lighten( $baseSeaGreen, 20% );}
+.text-seaGreen-60 { color: lighten( $baseSeaGreen, 28% );}
+
+.text-black-100 { color: $baseBlack; }
+.text-black-90 { color: lighten( $baseBlack, 5% );}
+.text-black-80 { color: lighten( $baseBlack, 10% );}
+.text-black-70 { color: lighten( $baseBlack, 25% );}
+.text-black-60 { color: lighten( $baseBlack, 20% );}
+
+.text-gray-100 { color: $baseGray; }
+.text-gray-90 { color: lighten( $baseGray, 10% );}
+.text-gray-80 { color: lighten( $baseGray, 20% );}
+.text-gray-70 { color: lighten( $baseGray, 30% );}
+.text-gray-60 { color: lighten( $baseGray, 45% );}
+
+.text-stateGray-100 { color: $baseStateGray; }
+.text-stateGray-90 { color: lighten( $baseStateGray, 10% );}
+.text-stateGray-80 { color: lighten( $baseStateGray, 20% );}
+.text-stateGray-70 { color: lighten( $baseStateGray, 30% );}
+.text-stateGray-60 { color: lighten( $baseStateGray, 45% );}
+
+.text-tan-100 { color: $baseTan; }
+.text-tan-90 { color: lighten( $baseTan, 10% );}
+.text-tan-80 { color: lighten( $baseTan, 20% );}
+.text-tan-70 { color: lighten( $baseTan, 30% );}
+.text-tan-60 { color: lighten( $baseTan, 36% );}
+
+.text-lightSalmon-100 { color: $baseLightSalmon; }
+.text-lightSalmon-90 { color: lighten( $baseLightSalmon, 10% );}
+.text-lightSalmon-80 { color: lighten( $baseLightSalmon, 20% );}
+.text-lightSalmon-70 { color: lighten( $baseLightSalmon, 30% );}
+.text-lightSalmon-60 { color: lighten( $baseLightSalmon, 36% );}
+
+.text-brown-100 { color: $baseBrown; }
+.text-brown-90 { color: lighten( $baseBrown, 10% );}
+.text-brown-80 { color: lighten( $baseBrown, 20% );}
+.text-brown-70 { color: lighten( $baseBrown, 30% );}
+.text-brown-60 { color: lighten( $baseBrown, 36% );}
+
+.text-red-100 { color: $baseRed; }
+.text-red-90 { color: lighten( $baseRed, 10% );}
+.text-red-80 { color: lighten( $baseRed, 15% );}
+.text-red-70 { color: lighten( $baseRed, 25% );}
+.text-red-60 { color: lighten( $baseRed, 33% );}
+
+.text-white { color: #fff;}
+// .bgc-blue-100 {
+//   background-color: darken($baseViolet, 2);
+// }
+// .bgc-blue-90 {
+//   background-color: darken($baseViolet, 4);
+// }
+// .bgc-blue-80 {
+//   background-color: darken($baseViolet, 6);
+// }
+// .bgc-blue-70 {
+//   background-color: darken($baseViolet, 8);
+// }
+// .bgc-blue-60 {
+//   background-color: darken($baseViolet, 10);
+// }
+// .bgc-blue-50 {
+//   background-color: $baseViolet;
+// }
