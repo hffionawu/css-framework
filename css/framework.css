@@ -208,48 +208,47 @@ footer, main {
 }
 
 .fx-items-1 {
-  width: 5.5%;
-  min-width: 90px;
+  width: calc((100% / 12) * 1 - 16px);
 }
 
 .fx-items-2 {
-  width: 14%;
+  width: calc((100% / 12) * 2 - 16px);
 }
 
 .fx-items-3 {
-  width: 21%;
+  width: calc((100% / 12) * 3 - 16px);
 }
 
 .fx-items-4 {
-  width: 28%;
+  width: calc((100% / 12) * 4 - 16px);
 }
 
 .fx-items-5 {
-  width: 35%;
+  width: calc((100% / 12) * 5 - 16px);
 }
 
 .fx-items-6 {
-  width: 42%;
+  width: calc((100% / 12) * 6 - 16px);
 }
 
 .fx-items-7 {
-  width: 49%;
+  width: calc((100% / 12) * 7 - 16px);
 }
 
 .fx-items-8 {
-  width: 56%;
+  width: calc((100% / 12) * 8 - 16px);
 }
 
 .fx-items-9 {
-  width: 63%;
+  width: calc((100% / 12) * 9 - 16px);
 }
 
 .fx-items-10 {
-  width: 70%;
+  width: calc((100% / 12) * 10 - 16px);
 }
 
 .fx-items-11 {
-  width: 77%;
+  width: calc((100% / 12) * 11 - 16px);
 }
 
 .fx-items-12 {
@@ -266,17 +265,27 @@ footer, main {
 }
 
 *[class^="fx-items"] {
-  margin: 0 8px;
+  margin: 0 calc(16px / 2);
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-flex: 1 1 auto;
-  -moz-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  -o-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex-flow: row wrap;
+  -moz-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  -o-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-flex: 0 1 auto;
+  -moz-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  -o-flex: 0 1 auto;
+  flex: 0 1 auto;
   /*
    * flex is : flex-grow, flex-shrink, flex-basis
      shortcut write.
@@ -291,6 +300,14 @@ footer, main {
 
 *[class^="fx-items"].space-no {
   margin: 0;
+}
+
+*[class^="fx-items"].allow-glow {
+  -webkit-flex-grow: 1 !important;
+  -moz-flex-grow: 1 !important;
+  -ms-flex-grow: 1 !important;
+  -o-flex-grow: 1 !important;
+  flex-grow: 1 !important;
 }
 
 .items-center {
@@ -450,6 +467,17 @@ footer, main {
     width: 100%;
     margin: 0;
   }
+  .container:before, .fx-container:before,
+  .container:after, .fx-container:after {
+    display: table;
+    content: " ";
+  }
+  .container:after, .fx-container:after {
+    clear: both;
+  }
+  .container, .fx-container {
+    *zoom: 1;
+  }
 }
 
 @media screen and (min-width: 641px) and (max-width: 800px) {
@@ -578,7 +606,7 @@ footer, main {
 @media screen and (min-width: 1681px) and (max-width: 1920px) {
   .container, .fx-container {
     width: 90%;
-    max-width: 1366px;
+    max-width: 1440px;
   }
   h1 {
     font-size: 3.2em;
